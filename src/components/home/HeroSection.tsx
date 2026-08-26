@@ -55,15 +55,7 @@ export const HeroSection: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-brand-gold-500 font-body text-sm font-semibold mb-6"
-          >
-            <span className="w-2 h-2 rounded-full bg-brand-gold-500 animate-pulse" />
-            Promo KPR Subsidi 2026
-          </motion.div>
+
 
           <h1 className="text-hero text-white mb-6">
             {siteConfig.brand.tagline}
@@ -93,15 +85,15 @@ export const HeroSection: React.FC = () => {
               Lihat Spesifikasi
             </Button>
           </div>
-        </motion.div>
-      </div>
 
-      {/* Mobile-only badges (shown below content) */}
-      <div className="absolute bottom-8 left-0 right-0 z-20 flex justify-center gap-3 px-4 md:hidden pointer-events-none">
-        <div className="flex flex-wrap justify-center gap-3">
-           <HeroFloatingBadge label="DP 1JT" className="relative static-transform" delay={0.2} />
-           <HeroFloatingBadge label="TYPE 30/60" className="relative static-transform" delay={0.4} />
-        </div>
+          {/* Mobile-only badges (flows naturally below buttons) */}
+          <div className="mt-8 flex justify-center gap-3 px-4 md:hidden pointer-events-none">
+            <div className="flex flex-wrap justify-center gap-3">
+               <HeroFloatingBadge label="DP 1JT" className="relative static-transform" delay={0.2} />
+               <HeroFloatingBadge label="TYPE 30/60" className="relative static-transform" delay={0.4} />
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

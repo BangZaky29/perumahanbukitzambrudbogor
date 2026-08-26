@@ -55,7 +55,7 @@ export const Navbar: React.FC = () => {
                   <img
                     src="/logo/logo-bukit-zamrud.png"
                     alt="Logo Bukit Zamrud"
-                    className="h-9 w-auto"
+                    className="h-8 sm:h-9 w-auto"
                   />
                 </div>
                 <div className="hidden sm:block">
@@ -69,18 +69,18 @@ export const Navbar: React.FC = () => {
               </Link>
               
               {/* Divider */}
-              <div className="hidden lg:block w-px h-10 bg-white/30 mx-5"></div>
+              <div className="w-px h-8 sm:h-10 bg-white/30 mx-3 sm:mx-5"></div>
               
               {/* Nuansa Properti Supported By */}
-              <div className="hidden lg:flex items-center gap-2">
+              <div className="flex items-center gap-2">
                 <div className="bg-white p-1 rounded-md">
                   <img 
                     src="/logo/logo-nuansa-properti.png" 
                     alt="Nuansa Properti" 
-                    className="h-9 w-auto object-contain"
+                    className="h-8 sm:h-9 w-auto object-contain"
                   />
                 </div>
-                <div className="flex flex-col justify-center">
+                <div className="hidden sm:flex flex-col justify-center">
                   <span className="text-[10px] text-white font-body font-bold leading-none mb-0.5">Support by</span>
                   <span className="text-xs text-white font-display font-bold leading-none">NuansaProperti</span>
                 </div>
