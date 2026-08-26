@@ -8,10 +8,10 @@ export const siteConfig = {
   },
 
   contact: {
-    whatsapp: "+6288213977435",
-    whatsappDisplay: "0882-1397-7435",
+    whatsapp: "+6288294096100",
+    whatsappDisplay: "0882-9409-6100",
     whatsappUrl: (message: string) =>
-      `https://wa.me/6288213977435?text=${encodeURIComponent(message)}`,
+      `https://wa.me/6288294096100?text=${encodeURIComponent(message)}`,
     email: "",
   },
 
@@ -34,7 +34,7 @@ export const siteConfig = {
     name: "Nuansa Properti",
     role: "Social Media Marketing Partner",
     social: {
-      instagram: "#",
+      instagram: "https://www.instagram.com/nuansaproperti?igsi=MWJ3NnFyYTZ5M3l6bA==",
       tiktok: "#",
       facebook: "#",
     },

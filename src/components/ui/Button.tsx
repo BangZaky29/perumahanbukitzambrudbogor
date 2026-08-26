@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { cn } from "../../lib/utils/cn";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -34,10 +35,20 @@ export const Button: React.FC<ButtonProps> = ({
   const classes = cn(variantClasses[variant], sizeClasses[size], className);
 
   if (asLink && href) {
+    const isExternal = href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:");
+    
+    if (isExternal) {
+      return (
+        <a href={href} className={classes} target="_blank" rel="noopener noreferrer">
+          {children}
+        </a>
+      );
+    }
+
     return (
-      <a href={href} className={classes} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined}>
+      <Link to={href} className={classes}>
         {children}
-      </a>
+      </Link>
     );
   }
 
