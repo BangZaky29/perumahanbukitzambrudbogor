@@ -1,3 +1,8 @@
+export interface ArticleTocItem {
+  id: string;
+  title: string;
+}
+
 export interface Article {
   id: string;
   slug: string;
@@ -8,7 +13,8 @@ export interface Article {
   author: string;
   publishedAt: string; // ISO date
   readingTimeMinutes: number;
-  content: string; // markdown/rich text
+  content: string; // structured text with markers: ## for h2, ### for h3, - for list items, > for blockquotes, **bold**
+  tableOfContents?: ArticleTocItem[];
 }
 
 export type ArticleCategory =

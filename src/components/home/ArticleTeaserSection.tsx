@@ -5,6 +5,7 @@ import { AnimatedReveal } from "../shared/AnimatedReveal";
 import { SectionHeading } from "../ui/SectionHeading";
 import { Button } from "../ui/Button";
 import { articles } from "../../data/articles.data";
+import { articleCategoryLabels } from "../../types/article.types";
 
 export const ArticleTeaserSection: React.FC = () => {
   // Get only the latest 3 articles
@@ -41,15 +42,14 @@ export const ArticleTeaserSection: React.FC = () => {
               >
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden bg-neutral-100">
-                  {/* Using placeholder for now, in real app would use article.imageUrl */}
                   <img
-                    src="/images/hero/hero-rumah.jpg"
+                    src={article.coverImage || "/images/hero/hero-rumah.jpg"}
                     alt={article.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="px-3 py-1 bg-brand-green-900/80 backdrop-blur-sm text-white text-xs font-body font-medium rounded-full">
-                      {article.category}
+                      {articleCategoryLabels[article.category] || article.category}
                     </span>
                   </div>
                 </div>

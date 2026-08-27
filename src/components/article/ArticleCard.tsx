@@ -21,12 +21,14 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
           alt={article.title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        {/* Placeholder Coming Soon Overlay */}
-        <div className="absolute inset-0 bg-brand-green-900/40 flex items-center justify-center backdrop-blur-[2px]">
-          <span className="text-white font-display font-bold text-sm tracking-widest uppercase border border-white/80 px-3 py-1.5 rounded-lg -rotate-12 bg-black/20 shadow-sm">
-            Coming Soon
-          </span>
-        </div>
+        {/* Placeholder Coming Soon Overlay — only if no content */}
+        {!article.content?.trim() && (
+          <div className="absolute inset-0 bg-brand-green-900/40 flex items-center justify-center backdrop-blur-[2px]">
+            <span className="text-white font-display font-bold text-sm tracking-widest uppercase border border-white/80 px-3 py-1.5 rounded-lg -rotate-12 bg-black/20 shadow-sm">
+              Coming Soon
+            </span>
+          </div>
+        )}
         
         {/* Category Badge */}
         <div className="absolute top-4 left-4 z-10">
