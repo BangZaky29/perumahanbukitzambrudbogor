@@ -61,7 +61,7 @@ export const HeroSection: React.FC = () => {
             {siteConfig.brand.tagline}
           </h1>
 
-          <p className="text-h3 font-body font-normal text-white/90 mb-10 max-w-2xl leading-relaxed">
+          <p className="text-lg md:text-xl font-body font-normal text-white/90 mb-8 md:mb-10 max-w-2xl leading-relaxed">
             Miliki rumah pertama impian Anda di lokasi strategis Tegal Waru, Ciampea. 
             Lingkungan asri, dekat kampus, dengan cicilan mulai Rp1 Jutaan.
           </p>

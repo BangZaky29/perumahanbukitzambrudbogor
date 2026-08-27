@@ -15,7 +15,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
       className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
     >
       {/* Image Container */}
-      <div className="relative h-48 md:h-56 overflow-hidden bg-neutral-100 group-hover:shadow-inner">
+      <div className="relative h-40 md:h-56 overflow-hidden bg-neutral-100 group-hover:shadow-inner">
         <img
           src={article.coverImage || "/images/hero/hero-rumah.jpg"}
           alt={article.title}
@@ -39,12 +39,12 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
       </div>
 
       {/* Content Container */}
-      <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-display font-semibold text-brand-green-900 mb-3 line-clamp-2 group-hover:text-brand-green-700 transition-colors">
+      <div className="p-4 sm:p-6 flex flex-col flex-grow">
+        <h3 className="text-lg md:text-xl font-display font-semibold text-brand-green-900 mb-2 md:mb-3 line-clamp-2 group-hover:text-brand-green-700 transition-colors">
           {article.title}
         </h3>
         
-        <p className="text-body text-neutral-500 mb-6 line-clamp-3 flex-grow leading-relaxed">
+        <p className="text-sm md:text-base text-neutral-500 mb-4 md:mb-6 line-clamp-3 flex-grow leading-relaxed">
           {article.excerpt}
         </p>
         

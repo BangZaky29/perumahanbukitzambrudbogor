@@ -158,7 +158,7 @@ export const ContentRenderer: React.FC<ContentRendererProps> = ({ content }) => 
   const blocks = parseContentToBlocks(content);
 
   return (
-    <div className="article-content space-y-6">
+    <div className="article-content space-y-4 md:space-y-6">
       {blocks.map((block, idx) => {
         switch (block.type) {
           case "h2":
@@ -166,7 +166,7 @@ export const ContentRenderer: React.FC<ContentRendererProps> = ({ content }) => 
               <h2
                 key={idx}
                 id={block.id}
-                className="text-2xl md:text-3xl font-display font-bold text-brand-green-900 mt-10 mb-4 scroll-mt-24 relative group"
+                className="text-xl md:text-2xl lg:text-3xl font-display font-bold text-brand-green-900 mt-8 md:mt-10 mb-3 md:mb-4 scroll-mt-24 relative group"
               >
                 <span className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 w-1 h-8 bg-brand-gold-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
                 {parseInlineFormatting(block.content)}
@@ -178,7 +178,7 @@ export const ContentRenderer: React.FC<ContentRendererProps> = ({ content }) => 
               <h3
                 key={idx}
                 id={block.id}
-                className="text-xl md:text-2xl font-display font-semibold text-brand-green-800 mt-8 mb-3 scroll-mt-24"
+                className="text-lg md:text-xl lg:text-2xl font-display font-semibold text-brand-green-800 mt-6 md:mt-8 mb-2 md:mb-3 scroll-mt-24"
               >
                 {parseInlineFormatting(block.content)}
               </h3>

@@ -50,7 +50,7 @@ export const ArticleDetailContent: React.FC<ArticleDetailContentProps> = ({
         {/* Main Article Content */}
         <article className="flex-1 max-w-4xl mx-auto bg-white rounded-3xl shadow-sm border border-neutral-100 overflow-hidden">
           {/* Hero Image */}
-          <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full bg-neutral-100 overflow-hidden">
+          <div className="relative h-[240px] md:h-[400px] lg:h-[500px] w-full bg-neutral-100 overflow-hidden">
             <img
               src={article.coverImage || "/images/hero/hero-rumah.jpg"}
               alt={article.title}
@@ -81,9 +81,9 @@ export const ArticleDetailContent: React.FC<ArticleDetailContentProps> = ({
             </Link>
           </div>
 
-          <div className="p-6 md:p-10 lg:p-12">
+          <div className="p-4 sm:p-6 md:p-10 lg:p-12">
             {/* Meta Info Bar */}
-            <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-6">
+            <div className="flex flex-wrap items-center gap-2 md:gap-4 mb-5 md:mb-6">
               <span className="px-3 py-1.5 bg-brand-green-50 text-brand-green-700 text-xs font-body font-semibold rounded-full uppercase tracking-wider">
                 {articleCategoryLabels[article.category] || article.category}
               </span>
@@ -102,7 +102,7 @@ export const ArticleDetailContent: React.FC<ArticleDetailContentProps> = ({
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-brand-green-900 mb-8 leading-tight">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold text-brand-green-900 mb-6 md:mb-8 leading-tight">
               {article.title}
             </h1>
 
